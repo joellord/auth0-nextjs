@@ -4,6 +4,7 @@
   "description": "This is a tutorial on how to connect Auth0 with NextJs",
   "main": "server.js",
   "scripts": {
+    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joel Lord <me@joel-lord.com>",
