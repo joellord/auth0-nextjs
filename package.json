@@ -1,0 +1,17 @@
+{
+  "name": "auth0-nextjs",
+  "version": "0.1.0",
+  "description": "This is a tutorial on how to connect Auth0 with NextJs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Lord <me@joel-lord.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "next": "^4.1.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
