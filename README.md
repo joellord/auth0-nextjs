@@ -4,6 +4,7 @@ A demonstration on how to use Auth0 with NextJS
 # Instructions
 Clone repository and run 
 ``` 
+npm install
 npm run dev 
 ```
 Then point your browser to
