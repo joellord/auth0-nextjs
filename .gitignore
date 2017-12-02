@@ -2,3 +2,4 @@
 node_modules
 npm-debug.log
 .next
+helpers/auth0-credentials.js

@@ -5,22 +5,14 @@ const linkStyling = {
     textDecoration: "none"
 };
 
-const menuItems = [
-    {linkTo: "/", label: "Home"},
-    {linkTo: "/secret", label: "Secret Area"}
-];
-
-const menuItemsFormatted = menuItems.map((i) => {
-    return (
-        <Link href={i.linkTo}>
-            <a style={linkStyling}>{i.label}</a>
-        </Link>
-    )
-});
-
 const Header = () => (
     <div>
-        {menuItemsFormatted}
+        <Link href="/">
+            <a style={linkStyling}>Home</a>
+        </Link>
+        <Link href="/secret">
+            <a style={linkStyling}>Secret Area</a>
+        </Link>
     </div>
 );
 
