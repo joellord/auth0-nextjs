@@ -1,7 +1,7 @@
 # auth0-nextjs
 A demonstration on how to use Auth0 with NextJS
 
-#Configuration
+# Configuration
 Edit the file `/helpers/auth0-credentials.sample.js` and rename it to `auth0-credentials.js`.  Your configuration can be found at https://manage.auth0.com/#/clients.
  
 
