@@ -2,13 +2,16 @@ import auth0 from "auth0-js";
 import AUTH0_CONFIG from "./auth0-credentials";
 
 class Auth {
-    auth0 = new auth0.WebAuth(AUTH0_CONFIG);
+    config = Object.assign(AUTH0_CONFIG, {scope: "openid profile"});
+    auth0 = new auth0.WebAuth(this.config);
+    userProfile;
 
     constructor() {
         this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
         this.handleAuthentication = this.handleAuthentication.bind(this);
         this.isAuthenticated = this.isAuthenticated.bind(this);
+        this.getProfile = this.getProfile.bind(this);
     }
 
     login() {
@@ -52,6 +55,23 @@ class Auth {
         const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
         console.log("Is user authenticated ? " + (new Date().getTime() < expiresAt) ? "Yes" : "No");
         return new Date().getTime() < expiresAt;
+    }
+
+    getProfile() {
+        let accessToken = localStorage.getItem("access_token");
+        let self = this;
+
+        return new Promise ((resolve, reject) => {
+            this.auth0.client.userInfo(accessToken, (err, profile) => {
+                if (profile) {
+                    self.userProfile = profile;
+                    resolve(profile);
+                } else {
+                    reject(err);
+                }
+            });
+        });
+
     }
 }
 

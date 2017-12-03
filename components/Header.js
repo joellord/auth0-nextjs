@@ -13,6 +13,9 @@ const Header = () => (
         <Link href="/secret">
             <a style={linkStyling}>Secret Area</a>
         </Link>
+        <Link href="/profile">
+            <a style={linkStyling}>My Profile</a>
+        </Link>
     </div>
 );
 
