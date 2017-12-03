@@ -1,21 +1,29 @@
 import Link from "next/link";
 
-const linkStyling = {
-    padding: 20,
-    textDecoration: "none"
-};
-
 const Header = () => (
     <div>
         <Link href="/">
-            <a style={linkStyling}>Home</a>
+            <a>Home</a>
         </Link>
         <Link href="/secret">
-            <a style={linkStyling}>Secret Area</a>
+            <a>Secret Area</a>
         </Link>
         <Link href="/profile">
-            <a style={linkStyling}>My Profile</a>
+            <a>My Profile</a>
         </Link>
+
+        <style jsx>{`
+            a {
+                text-decoration: none;
+                color: #666666;
+                padding-right: 20px;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: #000000;
+            }
+        `}</style>
     </div>
 );
 

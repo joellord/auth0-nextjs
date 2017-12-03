@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Auth from "../helpers/Auth";
 import AuthLayout from "../components/AuthLayout";
 
-
+// This page displays the user profile, you need to be authenticated to view this
 const Profile = (props) => (
     <AuthLayout>
         <div>
@@ -14,6 +14,9 @@ const Profile = (props) => (
     </AuthLayout>
 );
 
+// Here, we get the profile from our auth library and use this as the
+// initial properties for our page.  If not profile was found, we need
+// to return an empty profile.
 Profile.getInitialProps = async function () {
     const auth = new Auth();
     let profile;

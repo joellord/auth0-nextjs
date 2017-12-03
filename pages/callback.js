@@ -2,6 +2,7 @@ import Layout from "../components/MainLayout";
 import Auth from "../helpers/Auth";
 import React, {Component} from "react";
 
+// This is the page that gets called after the authentication process on auth0
 class CallBack extends Component {
     componentDidMount() {
         const auth = new Auth();
@@ -11,7 +12,7 @@ class CallBack extends Component {
     render () {
         return (
             <Layout>
-                Welcome back
+                Welcome back!  You may now access the secret area.
             </Layout>
         )
     }

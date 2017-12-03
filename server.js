@@ -6,6 +6,8 @@ const port = dev ? 3000 : 80;
 const app = next({dev});
 const handle = app.getRequestHandler();
 
+// In order to use localStorage on both the client and server, we need
+// to use the node-localstorage library
 if (typeof localStorage === "undefined" || localStorage === null) {
     const LocalStorage = require('node-localstorage').LocalStorage;
     localStorage = new LocalStorage('./scratch');
