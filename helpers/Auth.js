@@ -1,6 +1,5 @@
 import auth0 from "auth0-js";
 import AUTH0_CONFIG from "./auth0-credentials";
-// import Cookie from 'js-cookie'
 
 class Auth {
     auth0 = new auth0.WebAuth(AUTH0_CONFIG);

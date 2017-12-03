@@ -2,7 +2,7 @@ import Layout from "../components/MainLayout";
 import Auth from "../helpers/Auth";
 import React, {Component} from "react";
 
-class AuthCallBack extends Component {
+class CallBack extends Component {
     componentDidMount() {
         const auth = new Auth();
         auth.handleAuthentication(this.props.url.query.code);
@@ -17,4 +17,4 @@ class AuthCallBack extends Component {
     }
 }
 
-export default AuthCallBack;
+export default CallBack;
